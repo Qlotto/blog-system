@@ -1,0 +1,50 @@
+.nav{
+    margin-top: 40px;
+    margin-left: 50px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.nav a{
+    color: white;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    padding-right: 40px;
+}
+
+
+
+.categories__all{
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.categories__all a{
+    color: white;
+    text-decoration: none;
+}
+
+.articles__item{
+  max-width: 400px;
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 40px;
+}
+
+.articles__item__name a{
+  color: white;
+}
+
+a:hover{
+  color: yellow;
+}
+/* ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss */
+
+.modal-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content input{
+  margin-bottom: 15px;
+}

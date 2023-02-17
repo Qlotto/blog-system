@@ -1,0 +1,18 @@
+.nav{
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.nav a{
+    color: white;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.login form{
+    margin-top: 10px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+}
