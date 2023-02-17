@@ -51,10 +51,6 @@ a:hover{
 }
 /* ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss */
 
-.hidden-content{
-  display: none;
-}
-
 .modal-content{
   display: flex;
   flex-direction: column;

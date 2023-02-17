@@ -79,3 +79,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+.hidden-content{
+  display: none;
+}

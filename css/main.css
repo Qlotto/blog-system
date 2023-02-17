@@ -24,14 +24,14 @@
     text-decoration: none;
 }
 
-.blog__item{
+.articles__item{
   max-width: 400px;
   text-align: left;
   margin-left: 50px;
   margin-top: 40px;
 }
 
-.blog__item__name a{
+.articles__item__name a{
   color: white;
 }
 
@@ -39,10 +39,6 @@ a:hover{
   color: yellow;
 }
 /* ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss */
-
-.hidden-content{
-  display: none;
-}
 
 .modal-content{
   display: flex;
