@@ -1,0 +1,65 @@
+.nav{
+    margin-top: 40px;
+    margin-left: 50px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.nav a{
+    color: white;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    padding-right: 40px;
+}
+
+
+
+.categories__all{
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.categories__all a{
+    color: white;
+    text-decoration: none;
+}
+
+.blog{
+  max-width: 400px;
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 40px;
+}
+
+.blog__name, .blog__categories, .blog__description{
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog__name, .blog__categories, .blog__description a{
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.blog__edit{
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover{
+  color: yellow;
+}
+/* ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss */
+
+.hidden-content{
+  display: none;
+}
+
+.modal-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content input{
+  margin-bottom: 15px;
+}
