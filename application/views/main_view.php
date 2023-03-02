@@ -28,7 +28,7 @@
                     <input type="submit" value="Добавить">
                 </form>
             </div>
-            <div class="nav__exit"><a href="#">Выход</a></div>
+            <div class="nav__exit"><a href="Login">Выход</a></div>
         </nav>
 
         <div class="categories">

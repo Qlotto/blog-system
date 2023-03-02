@@ -12,8 +12,8 @@
 <body>
     <div class="page-one">
         <nav class="nav">
-            <div class="nav__add"><a href="#">Главная</a></div>
-            <div class="nav__exit"><a href="#">Выход</a></div>
+            <div class="nav__add"><a href="Main">Главная</a></div>
+            <div class="nav__exit"><a href="Login">Выход</a></div>
         </nav>
 
         <div class="blog">
