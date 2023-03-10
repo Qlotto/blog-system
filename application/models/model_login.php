@@ -6,20 +6,17 @@ class Model_Login extends Model
 	{	
 		$bd = new Database();
 
-		$name = $_POST['name'];
-		$password = $_POST['password'];
+		if(isset($_POST['name']) && isset($_POST['password'])){
+			$name = $_POST['name'];
+			$password = $_POST['password'];
 
-		$result = $bd->query("SELECT * FROM `users` WHERE `name` = '$name' AND `password` = '$password'");
+			$result = $bd->query("SELECT * FROM `users` WHERE `name` = '$name' AND `password` = '$password'");
 
-<<<<<<< HEAD
-=======
-		if($result == NULL){
-			echo "введи логин и пароль";
+			if($result){
+				header('Location: Main');
+			} else {
+				print_r('Логин или пароль введены неверно!');
+			}
 		}
-
->>>>>>> 663a73890c2e45624002c192126865ff8c5142c9
-		if($result){
-			header('Location: Main');
-		} 
 	}
 }

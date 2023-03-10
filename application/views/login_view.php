@@ -18,11 +18,7 @@
             <form action="#" method="POST">
                 <input type="text" name="name" placeholder="Имя">
                 <input type="password" name="password" placeholder="Пароль">
-<<<<<<< HEAD
                 <input type="submit" value="Логин">
-=======
-                <input type="submit" name="login" value="Логин">
->>>>>>> 663a73890c2e45624002c192126865ff8c5142c9
             </form>
         </div>
     </div>

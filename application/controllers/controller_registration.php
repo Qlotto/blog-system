@@ -11,7 +11,7 @@ class Controller_Registration extends Controller
 
 	function action_index()
 	{	
-		$data = $this->model->get_data();
-		$this->view->generate('registration_view.php', 'template_view.php', $data);
+		$this->model->get_data();
+		$this->view->generate('registration_view.php', 'template_view.php');
 	}
 }

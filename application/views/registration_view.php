@@ -18,7 +18,7 @@
             <form action="#" method="POST">
                 <input type="text" name="name" placeholder="Имя">
                 <input type="password" name="password" placeholder="Пароль">
-                <input type="submit" name="registration" value="Регистрация">
+                <input type="submit" value="Регистрация">
             </form>
         </div>
     </div>
