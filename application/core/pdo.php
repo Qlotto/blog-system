@@ -24,9 +24,11 @@ Class Database{
     }
 
     public function query($sql){
-        $exe = $this->execute($sql);
+        $sth = $this->link->prepare($sql);
 
-        $result = $exe->fetchAll(PDO::FETCH_ASSOC);
+        $sth->execute();
+
+        $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
         if($result === false){
             return [];
@@ -36,5 +38,3 @@ Class Database{
     }
 
 }
-
-$db = new Database();

@@ -15,10 +15,10 @@
         </nav>
 
         <div class="login">
-            <form action="#" >
+            <form action="#" method="POST">
                 <input type="text" name="name" placeholder="Имя">
                 <input type="password" name="password" placeholder="Пароль">
-                <input type="submit" name="Login" value="Логин">
+                <input type="submit" name="login" value="Логин">
             </form>
         </div>
     </div>
