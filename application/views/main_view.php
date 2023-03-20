@@ -16,61 +16,51 @@
         <nav class="nav">
             <div class="nav__add"><a href="#" data-fancybox data-src="#hidden-content">Добавить</a></div>
             <div class="hidden-content" id="hidden-content">
-                <form class="modal-content" action="#">
-                    <input type="text" placeholder="Название">
-                    <input type="text" placeholder="Текст">
-                    <input type="text" list="list">
-                    <datalist id="list">
-                        <option value="Все">
-                        <option value="Мода">
-                        <option value="Не мода">
-                    </datalist>
+
+                <form class="modal-content" action="/Main" method="POST">
+                    <input type="text" name="title" placeholder="Название">
+                    <textarea type="text" name="description" placeholder="Текст"></textarea>
+                    <select id="list" name="category">
+                        <?php
+                            foreach($data['categories'] as $n){
+                                ?>
+                                <option value="<?php echo $n['id'] ?>"><?php echo $n['category_name'] ?></option>
+                            <?php
+                            }
+                        ?>
+                    </select>
                     <input type="submit" value="Добавить">
                 </form>
+
             </div>
             <div class="nav__exit"><a href="Login">Выход</a></div>
         </nav>
 
         <div class="categories">
-            <div class="categories__all"><a href="#">Все</a></div>
+            <?php 
+            foreach($data['categories'] as $n){
+                ?>
+                <div class="categories__item"><a href="/Main?category=<?php echo $n['id'] ?>"><?php echo $n['category_name'] ?></a></div>
+                <?php
+            }
+            ?>
         </div>
 
-    <div class="articles">
-        <div class="articles__item">
-            <div class="articles__item__name"><a href="#">Название статьи</a></div>
-            <div class="articles__item__categories">Все</div>
-            <div class="articles__item__data">24.01.2023</div>
-            <div class="articles__item__description">описание статьи описание статьи описание статьи</div>
+        <div class="articles">
+        
+            <?php
+            foreach($data['articles'] as $n){
+                ?>
+            <div class="articles__item">
+                <div class="articles__item__name"><a href="/Article?id=<?php echo $n['id'] ?>"><?php echo $n['title'] ?></a></div>
+                <div class="articles__item__categories"><?php echo $n['category_name'] ?></div>
+                <div class="articles__item__data"><?php echo $n['date'] ?></div>
+                <div class="articles__item__description"><?php echo $n['description'] ?></div>
+            </div>
+                <?php
+            }
+            ?>
         </div>
-
-        <div class="articles__item">
-            <div class="articles__item__name"><a href="#">Название статьи</a></div>
-            <div class="articles__item__categories">Все</div>
-            <div class="articles__item__data">24.01.2023</div>
-            <div class="articles__item__description">описание статьи описание статьи описание статьи</div>
-        </div>
-
-        <div class="articles__item">
-            <div class="articles__item__name"><a href="#">Название статьи</a></div>
-            <div class="articles__item__categories">Все</div>
-            <div class="articles__item__data">24.01.2023</div>
-            <div class="articles__item__description">описание статьи описание статьи описание статьи</div>
-        </div>
-
-        <div class="articles__item">
-            <div class="articles__item__name"><a href="#">Название статьи</a></div>
-            <div class="articles__item__categories">Все</div>
-            <div class="articles__item__data">24.01.2023</div>
-            <div class="articles__item__description">описание статьи описание статьи описание статьи</div>
-        </div>
-
-        <div class="articles__item">
-            <div class="articles__item__name"><a href="#">Название статьи</a></div>
-            <div class="articles__item__categories">Все</div>
-            <div class="articles__item__data">24.01.2023</div>
-            <div class="articles__item__description">описание статьи описание статьи описание статьи</div>
-        </div>
-    </div>
     </div>
 
     <script src="./js/jquery-3.6.3.min.js"></script>

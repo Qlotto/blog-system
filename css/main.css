@@ -12,14 +12,12 @@
     padding-right: 40px;
 }
 
-
-
-.categories__all{
+.categories__item{
     margin-left: 50px;
     margin-top: 30px;
 }
 
-.categories__all a{
+.categories__item a{
     color: white;
     text-decoration: none;
 }

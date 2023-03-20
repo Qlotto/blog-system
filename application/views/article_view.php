@@ -22,16 +22,19 @@
             <div class="blog__categories" data-fancybox data-src="#hidden-content">Все<a href="#" class="blog__edit">изменить</a></div>
 
             <div class="hidden-content" id="hidden-content">
-                <form class="modal-content" action="#">
-                    <input type="text" placeholder="Название">
-                    <input type="text" placeholder="Текст">
-                    <input type="text" list="list">
-                    <datalist id="list">
-                        <option value="Все">
-                        <option value="Мода">
-                        <option value="Не мода">
-                    </datalist>
-                    <input type="submit" value="Изменить">
+            <form class="modal-content" action="/Article" method="POST">
+                    <input type="text" name="title" placeholder="Название">
+                    <textarea type="text" name="description" placeholder="Текст"></textarea>
+                    <select id="list" name="category">
+                        <?php
+                            foreach($data['categories'] as $n){
+                                ?>
+                                <option value="<?php echo $n['id'] ?>"><?php echo $n['category_name'] ?></option>
+                            <?php
+                            }
+                        ?>
+                    </select>
+                    <input type="submit" value="Добавить">
                 </form>
             </div>
         </div>
