@@ -10,7 +10,7 @@ class Controller_Article extends Controller
 
 	function action_index()
 	{	
-		$this->model->get_data();
-		$this->view->generate('article_view.php', 'template_view.php');
+		$data = $this->model->get_data();
+		$this->view->generate('article_view.php', 'template_view.php', $data);
 	}
 }
