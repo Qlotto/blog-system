@@ -6,8 +6,9 @@ class Route
 	{
 		$controller_name = 'Login';
 		$action_name = 'index';
-		
-		$routes = explode('/', $_SERVER['REQUEST_URI']);
+
+		$URIParts = explode('?',$_SERVER['REQUEST_URI']);
+  		$routes = explode('/',$URIParts[0]);
 
 		if ( !empty($routes[1]) )
 		{	
