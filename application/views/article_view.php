@@ -17,24 +17,27 @@
         </nav>
 
         <div class="blog">
-            <div class="blog__name" data-fancybox data-src="#hidden-content">Название статьи<a href="#" class="blog__edit">изменить</a></div>
-            <div class="blog__description" data-fancybox data-src="#hidden-content">описание статьи описание статьи описание статьи<a href="#" class="blog__edit">изменить</a></div>
-            <div class="blog__categories" data-fancybox data-src="#hidden-content">Все<a href="#" class="blog__edit">изменить</a></div>
+            <div class="blog__name" data-fancybox data-src="#hidden-content"><?php echo $data['article']['title'] ?><a href="#" class="blog__edit">изменить</a></div>
+            <div class="blog__description" data-fancybox data-src="#hidden-content"><?php echo $data['article']['description'] ?><a href="#" class="blog__edit">изменить</a></div>
+            <div class="blog__categories" data-fancybox data-src="#hidden-content"><?php echo $data['article']['category_name'] ?><a href="#" class="blog__edit">изменить</a></div>
 
             <div class="hidden-content" id="hidden-content">
-            <form class="modal-content" action="/Article" method="POST">
-                    <input type="text" name="title" placeholder="Название">
-                    <textarea type="text" name="description" placeholder="Текст"></textarea>
+            <form class="modal-content" action="/Article?id=<?php echo $data['article']['id'] ?>" method="POST">
+                    <input type="text" name="title" placeholder="Название" value='<?php echo $data['article']['title'] ?>'>
+                    <textarea type="text" name="description" placeholder="Текст"><?php echo $data['article']['description'] ?></textarea>
                     <select id="list" name="category">
                         <?php
                             foreach($data['categories'] as $n){
-                                ?>
-                                <option value="<?php echo $n['id'] ?>"><?php echo $n['category_name'] ?></option>
-                            <?php
+                                
+                                if($data['article']['category_id'] == $n['id']){
+                                   echo "<option selected='selected' value=".$n['id'].">".$n['category_name']."</option>";
+                                } else {
+                                    echo "<option value=".$n['id'].">".$n['category_name']."</option>";
+                                }
                             }
                         ?>
                     </select>
-                    <input type="submit" value="Добавить">
+                    <input type="submit" value="Изменить">
                 </form>
             </div>
         </div>
