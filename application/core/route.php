@@ -4,15 +4,21 @@ class Route
 {
 	static function start()
 	{
-		$controller_name = 'Login';
 		$action_name = 'index';
 
 		$URIParts = explode('?',$_SERVER['REQUEST_URI']);
   		$routes = explode('/',$URIParts[0]);
 
-		if ( !empty($routes[1]) )
-		{	
-			$controller_name = $routes[1];
+		if(!empty($_COOKIE['user_id'])){
+			$controller_name = 'Main';
+			if ( !empty($routes[1]) ) {	
+				$controller_name = $routes[1];
+			}
+		} else {
+			$controller_name = 'Login';
+			if ( $routes[1] == 'login' || $routes[1] == 'registration' ) {		
+				$controller_name = $routes[1];
+			}
 		}
 		
 		if ( !empty($routes[2]) )
