@@ -59,7 +59,6 @@ class Route
 		{
 			Route::ErrorPage404();
 		}
-	
 	}
 	
 	function ErrorPage404()
