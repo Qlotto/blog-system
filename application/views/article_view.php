@@ -17,9 +17,15 @@
         </nav>
 
         <div class="blog">
-            <div class="blog__name" data-fancybox data-src="#hidden-content"><?php echo $data['article']['title'] ?><a href="#" class="blog__edit">изменить</a></div>
-            <div class="blog__description" data-fancybox data-src="#hidden-content"><?php echo $data['article']['description'] ?><a href="#" class="blog__edit">изменить</a></div>
-            <div class="blog__categories" data-fancybox data-src="#hidden-content"><?php echo $data['article']['category_name'] ?><a href="#" class="blog__edit">изменить</a></div>
+            <div class="blog__name" data-fancybox data-src="#hidden-content">
+                <?php echo $data['article']['title'] ?><a href="#" class="blog__edit">изменить</a>
+            </div>
+            <div class="blog__description" data-fancybox data-src="#hidden-content">
+                <?php echo $data['article']['description'] ?><a href="#" class="blog__edit">изменить</a>
+            </div>
+            <div class="blog__categories" data-fancybox data-src="#hidden-content">
+                <?php echo $data['article']['category_name'] ?><a href="#" class="blog__edit">изменить</a>
+            </div>
 
             <div class="hidden-content" id="hidden-content">
             <form class="modal-content" action="/Article?id=<?php echo $data['article']['id'] ?>" method="POST">
