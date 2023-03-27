@@ -6,6 +6,7 @@ class Model_Main extends Model
 	{	
 		$db = new Database();
 		$result = array();
+		$user_id = $_COOKIE['user_id'];
 
 		// category output
 		$categories_query = "SELECT * FROM `categories`";
@@ -24,8 +25,9 @@ class Model_Main extends Model
 
 			$category_id = intval(htmlspecialchars($_GET["category"]));
 
-			$query = "SELECT articles.id, title, description, date, category_id, user_id, category_name 
-			FROM articles LEFT JOIN categories ON articles.category_id = categories.id WHERE `category_id` = $category_id";
+			$query = "SELECT articles.id, title, description, date, category_id, user_id, category_name FROM articles
+				LEFT JOIN categories ON articles.category_id = categories.id WHERE `category_id` = $category_id AND `user_id` = $user_id";
+			
 			$posts = $db->query($query);
 
 			$articles_values = array();
@@ -51,7 +53,7 @@ class Model_Main extends Model
 			$date = date('Y-m-d H:i:s');
 
 			$query = "INSERT INTO `articles` (`title`, `description`, `category_id`, `date`, `user_id`) 
-			VALUES ('$title', '$description', '$category', '$date', '28')";
+			VALUES ('$title', '$description', '$category', '$date', '$user_id')";
 			$db->query($query);
 
 			header('Location: Main');
@@ -60,8 +62,9 @@ class Model_Main extends Model
 
 		// display posts on homepage
 		if(!isset($_GET['category'])){
+			
 			$articles_query = "SELECT articles.id, title, description, date, category_id, user_id, category_name  
-			FROM articles JOIN categories ON articles.category_id = categories.id";
+			FROM articles JOIN categories ON articles.category_id = categories.id WHERE `user_id` = $user_id";
 
 			$articles = $db->query($articles_query);
 
