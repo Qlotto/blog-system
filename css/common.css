@@ -1,0 +1,13 @@
+.page-one{
+    padding-top: 100px;
+    min-height: 100vh;
+    position: relative;
+}
+
+.hidden-content{
+    display: none;
+}
+
+a:hover{
+    color: yellow;
+}
