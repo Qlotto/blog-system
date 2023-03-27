@@ -1,6 +1,7 @@
 .nav{
     margin-top: 40px;
-    margin-left: 50px;
+    margin-right: 50px;
+    text-align: right;
 }
 
 .nav a{
@@ -9,10 +10,43 @@
     text-decoration: none;
 }
 
+.login{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
 .login form{
-    margin-top: 10px;
-    margin-left: 50px;
+    /* margin-top: 300px; */
     display: flex;
     flex-direction: column;
-    max-width: 200px;
+    align-items: center;
+}
+
+.login_form input{
+    padding: 15px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    width: 500px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.login_form input[type=submit]{
+    background: white;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+.login_form input:hover{
+    background-color: #000;
+    color: white;
+
 }

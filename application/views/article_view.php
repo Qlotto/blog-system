@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/article.css">
     <link rel="stylesheet" href="./css/fancybox.css">
+    <link rel="stylesheet" href="./css/comman.css">
     <title>article</title>
 </head>
 <body>
@@ -17,9 +18,18 @@
         </nav>
 
         <div class="blog">
-            <div class="blog__name" data-fancybox data-src="#hidden-content"><?php echo $data['article']['title'] ?><a href="#" class="blog__edit">изменить</a></div>
-            <div class="blog__description" data-fancybox data-src="#hidden-content"><?php echo $data['article']['description'] ?><a href="#" class="blog__edit">изменить</a></div>
-            <div class="blog__categories" data-fancybox data-src="#hidden-content"><?php echo $data['article']['category_name'] ?><a href="#" class="blog__edit">изменить</a></div>
+            <div class="blog__name" data-fancybox data-src="#hidden-content">
+                <div class="blog__clue"><?php echo 'Название поста: ' ?></div>
+                <?php echo $data['article']['title'] ?><a href="#" class="blog__edit">изменить</a>
+            </div>
+            <div class="blog__description" data-fancybox data-src="#hidden-content">
+                <div class="blog__clue"><?php echo 'Описание поста: ' ?></div>
+                <?php echo $data['article']['description'] ?><a href="#" class="blog__edit"></a>
+            </div>
+            <div class="blog__categories" data-fancybox data-src="#hidden-content">
+            <div class="blog__clue"><?php echo 'Категория поста: ' ?></div>
+                <?php echo $data['article']['category_name'] ?><a href="#" class="blog__edit"></a>
+            </div>
 
             <div class="hidden-content" id="hidden-content">
             <form class="modal-content" action="/Article?id=<?php echo $data['article']['id'] ?>" method="POST">

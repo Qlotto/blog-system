@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/fancybox.css">
+    <link rel="stylesheet" href="./css/comman.css">
     <title>main</title>
 </head>
 <body>
@@ -51,8 +52,8 @@
                 ?>
             <div class="articles__item">
                 <div class="articles__item__name"><a href="/Article?id=<?php echo $n['id'] ?>"><?php echo $n['title'] ?></a></div>
-                <div class="articles__item__categories"><?php echo $n['category_name'] ?></div>
-                <div class="articles__item__data"><?php echo $n['date'] ?></div>
+                <div class="articles__item__categories"><?php echo 'Категория: ' . $n['category_name']?></div>
+                <div class="articles__item__data"><?php echo 'Дата публикации: ' . $n['date'] ?></div>
                 <div class="articles__item__description"><?php echo $n['description'] ?></div>
             </div>
                 <?php

@@ -3,6 +3,7 @@
     margin-left: 50px;
     justify-content: space-between;
     display: flex;
+    margin-bottom: 60px;
 }
 
 .nav a{
@@ -12,28 +13,28 @@
     padding-right: 40px;
 }
 
-
-
-.categories__all{
-    margin-left: 50px;
-    margin-top: 30px;
-}
-
-.categories__all a{
-    color: white;
-    text-decoration: none;
-}
-
 .blog{
-  max-width: 400px;
+  margin: 0 auto;
+  max-width: 1000px;
   text-align: left;
-  margin-left: 50px;
-  margin-top: 40px;
+  border: 1px solid white;
+  padding: 20px;  
+}
+
+.blog__clue{
+  margin-right: 40px;
+  font-weight: 700;
+}
+
+.blog__name{
+  margin-top: 10px;
 }
 
 .blog__name, .blog__categories, .blog__description{
     display: flex;
     justify-content: space-between;
+    padding-bottom: 10px;
+
 }
 
 .blog__name, .blog__categories, .blog__description a{
